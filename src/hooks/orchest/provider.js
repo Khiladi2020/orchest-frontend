@@ -12,7 +12,7 @@ import { isCurrentSession, isSession } from "./utils";
 import { OrchestContext } from "./context";
 import { OrchestSessionsProvider } from "./sessions";
 import { useLocalStorage } from "../local-storage";
-import { uuidv4 } from "@orchest/lib-utils";
+import { uuidv4 } from "../../components/lib-utils";
 
 const reducer = (state, action) => {
   switch (action.type) {

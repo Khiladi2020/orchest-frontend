@@ -2,26 +2,26 @@ import {
   MDCButtonReact,
   MDCDrawerReact,
   MDCLinearProgressReact,
-} from "@orchest/lib-mdc";
-import { OrchestSessionsConsumer, useOrchest } from "@/hooks/orchest";
+} from "../lib-mdc";
+import { OrchestSessionsConsumer, useOrchest } from "../../hooks/orchest";
 // import type { PipelineJson, TViewPropsWithRequiredQueryArgs } from "@/types";
 import {
   PromiseManager,
   makeCancelable,
   makeRequest,
-} from "@orchest/lib-utils";
+} from "../lib-utils";
 import {
   createOutgoingConnections,
   filterServices,
   getPipelineJSONEndpoint,
-} from "@/utils/webserver-utils";
+} from "../../utils/webserver-utils";
 
-import { Layout } from "@/components/Layout";
-import LogViewer from "@/pipeline-view/LogViewer";
+import { Layout } from "../Layout";
+import LogViewer from "./LogViewer";
 import React from "react";
 import io from "socket.io-client";
-import { siteMap } from "@/Routes";
-import { useCustomRoute } from "@/hooks/useCustomRoute";
+import { siteMap } from "../../Routes";
+import { useCustomRoute } from "../../hooks/useCustomRoute";
 
 const LogsView = () => {
   // global states

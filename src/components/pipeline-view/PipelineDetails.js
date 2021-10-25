@@ -3,7 +3,7 @@ import { RefManager } from "../lib-utils";
 import { MDCButtonReact, MDCTabBarReact } from "../lib-mdc";
 import PipelineDetailsProperties from "./PipelineDetailsProperties";
 import PipelineDetailsLogs from "./PipelineDetailsLogs";
-// import { useLocalStorage } from "@/hooks/local-storage";
+import { useLocalStorage } from "../../hooks/local-storage";
 
 const PipelineDetails = ({ defaultViewIndex = 0, ...props }) => {
   const { $ } = window;

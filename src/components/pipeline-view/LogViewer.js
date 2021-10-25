@@ -2,7 +2,7 @@ import * as React from "react";
 import { RefManager, uuidv4 } from "../lib-utils";
 import { XTerm } from "xterm-for-react";
 import { FitAddon } from "xterm-addon-fit";
-// import { useInterval } from "@/hooks/use-interval";
+import { useInterval } from "../../hooks/use-interval";
 
 const HEARTBEAT_INTERVAL = 60 * 1000; // send heartbeat every minute
 

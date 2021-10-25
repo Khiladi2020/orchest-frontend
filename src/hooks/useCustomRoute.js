@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useHistory } from "react-router-dom";
 
-import { toQueryString } from "@/routingConfig";
+import { toQueryString } from "../routingConfig";
 import { useSendAnalyticEvent } from "./useSendAnalyticEvent";
 
 // NOTE: if the parameter is safe to expose to user (i.e. component can read it from the URL), use useLocationQuery

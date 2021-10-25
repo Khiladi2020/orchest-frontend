@@ -19,7 +19,7 @@ import {
   getServiceURLs,
   serverTimeToDate,
   validatePipeline,
-} from "@/utils/webserver-utils";
+} from "../../utils/webserver-utils";
 
 // import { Layout } from "@/components/Layout";
 import { MDCButtonReact } from "../lib-mdc";
@@ -28,9 +28,9 @@ import PipelineDetails from "./PipelineDetails";
 // import type { PipelineJson } from "@/types";
 import PipelineStep from "./PipelineStep";
 import _ from "lodash";
-// import io from "socket.io-client";
-// import { siteMap } from "../Routes";
-// import { useCustomRoute } from "@/hooks/useCustomRoute";
+import io from "socket.io-client";
+import { siteMap } from "../../Routes";
+import { useCustomRoute } from "../../hooks/useCustomRoute";
 import { useHotKey } from "./hooks/useHotKey";
 
 const STATUS_POLL_FREQUENCY = 1000;
@@ -42,34 +42,21 @@ const DEFAULT_SCALE_FACTOR = 1;
 
 const PipelineView = () => {
   const { $, orchest } = window;
-  // const {
-  //   get,
-  //   state: { sessionsIsLoading },
-  //   dispatch,
-  // } = useOrchest();
+  const {
+    get,
+    state: { sessionsIsLoading },
+    dispatch,
+  } = useOrchest();
 
-  // const {
-  //   projectUuid,
-  //   pipelineUuid,
-  //   jobUuid: jobUuidFromRoute,
-  //   runUuid: runUuidFromRoute,
-  //   isReadOnly: isReadOnlyFromQueryString,
-  //   navigateTo,
-  // } = useCustomRoute();
+  const {
+    projectUuid,
+    pipelineUuid,
+    jobUuid: jobUuidFromRoute,
+    runUuid: runUuidFromRoute,
+    isReadOnly: isReadOnlyFromQueryString,
+    navigateTo,
+  } = useCustomRoute();
 
-  // ****** Temp Values ***** //
-  const projectUuid='50'
-  const pipelineUuid='60'
-  const jobUuidFromRoute ='61'
-  const runUuidFromRoute='62'
-  let isReadOnlyFromQueryString= false
-
-  const dispatch = ()=>{}
-  const get = {}
-  const validatePipeline = ()=> {}
-  const sessionsIsLoading = false
-  let pipelineJSONEndpoint = '/kl'
-  // **end** //
 
   const [isReadOnly, _setIsReadOnly] = useState(isReadOnlyFromQueryString);
   

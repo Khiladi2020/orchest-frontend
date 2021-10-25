@@ -1,6 +1,6 @@
 import React from "react";
 import { useOrchest } from "./orchest";
-import { makeRequest } from "@orchest/lib-utils";
+import { makeRequest } from "../components/lib-utils";
 
 // use this hook as a side effect by specifying the parameters, it will fire when the component mounts
 // useSendAnalyticEvent('view load', { name: 'projectsView' });

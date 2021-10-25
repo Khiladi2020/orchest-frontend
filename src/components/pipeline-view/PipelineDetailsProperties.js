@@ -1,4 +1,4 @@
-// import "codemirror/mode/javascript/javascript";
+import "codemirror/mode/javascript/javascript";
 
 import * as React from "react";
 

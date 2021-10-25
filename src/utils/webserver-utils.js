@@ -1,12 +1,12 @@
 import _ from "lodash";
 import Ajv from "ajv";
 
-import { makeRequest, extensionFromFilename } from "@orchest/lib-utils";
+import { makeRequest, extensionFromFilename } from "../components/lib-utils";
 import { format, parseISO } from "date-fns";
 import dashify from "dashify";
 import pascalcase from "pascalcase";
 
-import { pipelineSchema } from "@/utils/pipeline-schema";
+import { pipelineSchema } from "./pipeline-schema";
 
 const ajv = new Ajv({
   allowUnionTypes: true,
