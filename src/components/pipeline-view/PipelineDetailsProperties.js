@@ -13,7 +13,7 @@ import {
   makeRequest,
 } from "../lib-utils";
 
-// import { Controlled as CodeMirror } from "react-codemirror2";
+import { Controlled as CodeMirror } from "react-codemirror2";
 // import ProjectFilePicker from "../components/ProjectFilePicker";
 import _ from "lodash";
 

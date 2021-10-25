@@ -1,9 +1,9 @@
 import * as React from "react";
 // import { DIALOG_ANIMATION_DURATION } from "@orchest/design-system";
-const DIALOG_ANIMATION_DURATION=0.6
 import { useLocalStorage } from "../../../hooks/local-storage";
 import { useProjects } from "../../../hooks/projects";
 import useSWR from "swr";
+const DIALOG_ANIMATION_DURATION=0.6
 
 export const useOnboardingDialog = () => {
   const { data: state, mutate: setState } = useSWR(

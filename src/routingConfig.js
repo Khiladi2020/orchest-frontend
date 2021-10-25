@@ -12,13 +12,6 @@ const getTitle = (pageTitle) => `${pageTitle} · Orchest`;
 // NOTE: the order of the routes matters, react-router loads the first route that matches the given path
 
 export const orderedRoutes = [
-
-  {
-    name: "pipelines",
-    path: "/pipelines",
-    title: getTitle("Pipelines"),
-    component: PipelinesView,
-  },
   {
     name: "pipeline",
     path: "/pipeline",

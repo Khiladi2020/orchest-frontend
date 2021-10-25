@@ -5,6 +5,7 @@ import { makeRequest, extensionFromFilename } from "../components/lib-utils";
 import { format, parseISO } from "date-fns";
 import dashify from "dashify";
 import pascalcase from "pascalcase";
+import $ from "jquery";
 
 import { pipelineSchema } from "./pipeline-schema";
 
@@ -197,8 +198,7 @@ export class OverflowListener {
       if (triggerOverflow && this.triggerOverflow !== triggerOverflow) {
         new ResizeObserver(() => {
           if (triggerOverflow) {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
+            
             if ($(triggerOverflow).overflowing()) {
               $(".observe-overflow").addClass("overflowing");
             } else {
@@ -228,7 +228,7 @@ export class BackgroundTaskPoller {
   ) {
     // default to no-op callback
     if (!onComplete) {
-      onComplete = () => {}; // eslint-disable-line @typescript-eslint/no-empty-function
+      onComplete = () => {}; 
     }
 
     this.activeTasks[taskUuid] = true;

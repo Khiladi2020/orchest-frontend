@@ -1031,12 +1031,12 @@ const PipelineView = () => {
 
   const fetchPipelineAndInitialize = () => {
     let promises = [];
-    // let pipelineJSONEndpoint = getPipelineJSONEndpoint(
-    //   pipelineUuid,
-    //   projectUuid,
-    //   jobUuidFromRoute,
-    //   runUuidFromRoute
-    // );
+    let pipelineJSONEndpoint = getPipelineJSONEndpoint(
+      pipelineUuid,
+      projectUuid,
+      jobUuidFromRoute,
+      runUuidFromRoute
+    );
 
     if (!isReadOnly) {
       // fetch pipeline cwd
