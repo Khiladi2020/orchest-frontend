@@ -1,4 +1,4 @@
-// import { OrchestSessionsConsumer, useOrchest } from "@/hooks/orchest";
+import { OrchestSessionsConsumer, useOrchest } from "../../hooks/orchest";
 import {
   PromiseManager,
   RefManager,
@@ -11,15 +11,15 @@ import {
 } from "../lib-utils";
 import React, { useEffect, useRef, useState } from "react";
 import { Rectangle, getStepSelectorRectangle } from "./Rectangle";
-// import {
-//   checkGate,
-//   filterServices,
-//   getPipelineJSONEndpoint,
-//   getScrollLineHeight,
-//   getServiceURLs,
-//   serverTimeToDate,
-//   validatePipeline,
-// } from "@/utils/webserver-utils";
+import {
+  checkGate,
+  filterServices,
+  getPipelineJSONEndpoint,
+  getScrollLineHeight,
+  getServiceURLs,
+  serverTimeToDate,
+  validatePipeline,
+} from "@/utils/webserver-utils";
 
 // import { Layout } from "@/components/Layout";
 import { MDCButtonReact } from "../lib-mdc";
